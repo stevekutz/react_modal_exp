@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import ModalBasic from './comp/ModalBasic';
+import ModalSenaticUI from './comp/modalSemanticUI';
 
 function App() {
     const [isModal, setModal] = React.useState(false);
@@ -16,6 +17,7 @@ function App() {
         footer={<button onClick = { () => setModal(false)}>Cancel</button>}
         onClose={() => setModal(false)}
       />
+      <ModalSenaticUI/>
     </React.Fragment>
   );
 }
