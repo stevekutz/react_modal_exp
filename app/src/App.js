@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Modal from './Modal';
+import ModalBasic from './comp/ModalBasic';
 
 function App() {
     const [isModal, setModal] = React.useState(false);
@@ -9,11 +9,11 @@ function App() {
   return (
     <React.Fragment>
       <button onClick={() => setModal(true)}>Click Here</button>
-      <Modal
+      <ModalBasic
         isVisible={isModal}
         title="Modal Title"
         content={<p>Add your content here</p>}
-        footer={<button>Cancel</button>}
+        footer={<button onClick = { () => setModal(false)}>Cancel</button>}
         onClose={() => setModal(false)}
       />
     </React.Fragment>

@@ -1,7 +1,7 @@
 import React from 'react';
-import './modal.css';
+import './modalbasic.css';
 
-function Modal({ isVisible = false, title, content, footer, onClose }) {
+function ModalBasic({ isVisible = false, title, content, footer, onClose }) {
     React.useEffect(() => {
       document.addEventListener('keydown', keydownHandler);
       return () => document.removeEventListener('keydown', keydownHandler);
@@ -34,4 +34,4 @@ function Modal({ isVisible = false, title, content, footer, onClose }) {
     );
   }
 
-  export default Modal;
+  export default ModalBasic;
